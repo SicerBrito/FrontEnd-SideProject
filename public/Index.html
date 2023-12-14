@@ -3,65 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../src/assets/style/style.css">
     <title>Mi Portafolio</title>
 </head>
 <body>
-    <header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
-            <h1>Mi Portafolio</h1>
+            <a class="navbar-brand" href="#">Tu Logo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portafolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header text-center">
+        <div class="container">
+            <h1>Bienvenido a mi Portafolio</h1>
+            <p>Explora mis proyectos y experiencias.</p>
         </div>
     </header>
 
-    <section id="about">
-        <div class="container">
-            <h2>Sobre mí</h2>
-            <p>Bienvenido a mi portafolio. Soy [Tu Nombre], un apasionado [Tu Profesión] con experiencia en [Tus Habilidades].</p>
-        </div>
+    <!-- Cards (donde se mostrarán las hojas de vida) -->
+    <section class="cards container" id="portfolio">
+        <!-- Las cards se generarán dinámicamente con JavaScript desde la API -->
     </section>
 
-    <section id="skills">
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-            <h2>Habilidades</h2>
-            <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Node.js</li>
-                <!-- Agrega más habilidades según sea necesario -->
-            </ul>
-        </div>
-    </section>
-
-    <section id="experience">
-        <div class="container">
-            <h2>Experiencia Laboral</h2>
-            <div class="job">
-                <h3>Desarrollador Web en XYZ Company</h3>
-                <p>Trabajé en proyectos emocionantes utilizando tecnologías como React y Node.js.</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Contacto</h4>
+                    <p>Email: info@tudominio.com</p>
+                    <p>Teléfono: +123 456 7890</p>
+                </div>
+                <div class="col-md-6 text-md-right">
+                    <h4>Sígueme</h4>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#">Facebook</a></li>
+                        <li class="list-inline-item"><a href="#">Twitter</a></li>
+                        <li class="list-inline-item"><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
             </div>
-            <!-- Agrega más experiencias laborales según sea necesario -->
         </div>
-    </section>
-
-    <section id="education">
-        <div class="container">
-            <h2>Educación</h2>
-            <div class="degree">
-                <h3>Grado en Ciencias de la Computación</h3>
-                <p>Universidad ABC - Año de graduación: 20XX</p>
+        <div class="bottom-bar">
+            <div class="container">
+                <p class="mb-0">&copy; 2023 Tu Nombre. Todos los derechos reservados.</p>
             </div>
-            <!-- Agrega más información educativa según sea necesario -->
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Mi Portafolio</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Scripts -->
+    <script src="../src/assets/js/main.js"></script>
 </body>
 </html>
