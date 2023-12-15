@@ -15,26 +15,29 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Tu Logo</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#home">Inicio <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portafolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contacto</a>
-                    </li>
-                </ul>
-            </div>
+          <a class="navbar-brand" href="#">Tu Logo</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#home" aria-current="page">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Portafolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contacto</a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </nav>
+      </nav>
+
+      
+      
+      
 
     <!-- Header -->
     <header class="header text-center">
@@ -43,6 +46,56 @@
             <p>Explora mis proyectos y experiencias.</p>
         </div>
     </header>
+    
+
+
+    <div class="containerPost">
+        <h1>Enviar Perfil</h1>
+        <form id="perfilForm">
+            <label for="nombres">Nombres:</label>
+            <input type="text" id="nombres" name="nombres" required>
+            
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <!-- Agrega los demás campos según sea necesario -->
+
+            <button type="button" onclick="enviarPerfil()">Enviar Perfil</button>
+        </form>
+    </div>
+
+    <!-- Modal para editar perfil -->
+<div class="modal fade" id="editarPerfilModal" tabindex="-1" role="dialog" aria-labelledby="editarPerfilModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <!-- Contenido del modal de edición aquí -->
+        </div>
+    </div>
+</div>
+
+<!-- Modal para confirmar eliminación -->
+<div class="modal fade" id="eliminarPerfilModal" tabindex="-1" role="dialog" aria-labelledby="eliminarPerfilModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <!-- Contenido del modal de eliminación aquí -->
+        </div>
+    </div>
+</div>
+
+<!-- Botón para agregar nuevo perfil -->
+<button class="btn btn-primary" data-toggle="modal" data-target="#nuevoPerfilModal">+</button>
+
+<!-- Modal para agregar nuevo perfil -->
+<div class="modal fade" id="nuevoPerfilModal" tabindex="-1" role="dialog" aria-labelledby="nuevoPerfilModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <!-- Contenido del modal de nuevo perfil aquí -->
+        </div>
+    </div>
+</div>
 
     <!-- Cards (donde se mostrarán las hojas de vida) -->
     <section class="cards container" id="portfolio">
@@ -52,30 +105,32 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h4>Contacto</h4>
-                    <p>Email: info@tudominio.com</p>
-                    <p>Teléfono: +123 456 7890</p>
-                </div>
-                <div class="col-md-6 text-md-right">
-                    <h4>Sígueme</h4>
-                    <ul class="list-inline">
-                        <li class="list-inline-item"><a href="#">Facebook</a></li>
-                        <li class="list-inline-item"><a href="#">Twitter</a></li>
-                        <li class="list-inline-item"><a href="#">LinkedIn</a></li>
-                    </ul>
-                </div>
+          <div class="row">
+            <div class="col-md-6">
+              <h4>Contacto</h4>
+              <p>Email: info@tudominio.com</p>
+              <p>Teléfono: +123 456 7890</p>
             </div>
-        </div>
-        <div class="bottom-bar">
+            <div class="col-md-6 text-md-right">
+              <h4>Sígueme</h4>
+              <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Facebook</a></li>
+                <li class="list-inline-item"><a href="#">Twitter</a></li>
+                <li class="list-inline-item"><a href="#">LinkedIn</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="bottom-bar">
             <div class="container">
-                <p class="mb-0">&copy; 2023 Tu Nombre. Todos los derechos reservados.</p>
+              <p class="mb-0">&copy; 2023 Tu Nombre. Todos los derechos reservados.</p>
             </div>
+          </div>
         </div>
-    </footer>
+      </footer>
+      
 
     <!-- Scripts -->
-    <script src="../src/assets/js/main.js"></script>
+    <script src="../src/assets/js/main.js" defer></script>
+    <script src="../src/assets/js/post.js" defer></script>
 </body>
 </html>
