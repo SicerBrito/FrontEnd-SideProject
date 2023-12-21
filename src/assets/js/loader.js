@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.body.style.backgroundColor = "black";
 
     // Utiliza fetch para cargar la página de carga
-    fetch("loader.html")
+    fetch("../src/components/html/loader.html")
         .then(response => response.text())
         .then(html => {
             // Agrega la página de carga al contenedor
